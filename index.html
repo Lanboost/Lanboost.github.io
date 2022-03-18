@@ -1,24 +1,112 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | PathFinderExample</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Release.json", {onProgress: UnityProgress});
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial;
+        color: white;
+      }
+
+      .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+
+      .left {
+        left: 0;
+        background-color: #fff;
+      }
+
+      .right {
+        right: 0;
+        background-color: #fff;
+      }
+
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .centered img {
+        width: 100%;
+      }
+
+      .button {
+        cursor: pointer;
+        margin-bottom: 50px;
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+        border: 1px solid hsl(0, 0%, 0%);
+        text-shadow: 1px 1px 0px hsl(0, 0%, 12%);
+
+        -webkit-box-shadow: inset 0px 1px 0px hsl(0, 0%, 40%),
+          inset 0px -10px 20px hsl(0, 0%, 22%),
+          0px 2px 10px hsla(0, 0%, 0%, 0.4);
+        -moz-box-shadow: inset 0px 1px 0px hsl(0, 0%, 40%),
+          inset 0px -10px 20px hsl(0, 0%, 22%),
+          0px 2px 10px hsla(0, 0%, 0%, 0.4);
+        box-shadow: inset 0px 1px 0px hsl(0, 0%, 40%),
+          inset 0px -10px 20px hsl(0, 0%, 22%),
+          0px 2px 10px hsla(0, 0%, 0%, 0.4);
+        background: hsl(0, 0%, 27%);
+
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+      }
+
+      .button:hover {
+        -webkit-box-shadow: inset 0px 1px 0px hsl(0, 0%, 53%),
+          inset 0px -10px 20px hsl(0, 0%, 35%),
+          0px 2px 10px hsla(0, 0%, 0%, 0.4);
+        -moz-box-shadow: inset 0px 1px 0px hsl(0, 0%, 53%),
+          inset 0px -10px 20px hsl(0, 0%, 35%),
+          0px 2px 10px hsla(0, 0%, 0%, 0.4);
+        box-shadow: inset 0px 1px 0px hsl(0, 0%, 53%),
+          inset 0px -10px 20px hsl(0, 0%, 35%),
+          0px 2px 10px hsla(0, 0%, 0%, 0.4);
+        background: hsl(0, 0%, 40%);
+      }
+
+      .button:active {
+        -webkit-box-shadow: inset 0px 1px 0px hsl(0, 0%, 30%),
+          inset 0px -10px 20px hsl(0, 0%, 19%),
+          0px 2px 10px hsla(0, 0%, 0%, 0.4);
+        -moz-box-shadow: inset 0px 1px 0px hsl(0, 0%, 30%),
+          inset 0px -10px 20px hsl(0, 0%, 19%),
+          0px 2px 10px hsla(0, 0%, 0%, 0.4);
+        box-shadow: inset 0px 1px 0px hsl(0, 0%, 30%),
+          inset 0px -10px 20px hsl(0, 0%, 19%),
+          0px 2px 10px hsla(0, 0%, 0%, 0.4);
+        background: hsl(0, 0%, 25%);
+      }
+    </style>
   </head>
   <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">PathFinderExample</div>
+    <div class="split left">
+      <div class="centered">
+        <img src="https://lanboost.net/img/Lanboost.png" alt="Lanboost Image" />
+      </div>
+    </div>
+
+    <div class="split right">
+      <div class="centered">
+        <a href="/UnityOverlay/">
+          <div class="button">Unity Overlay Tooltip And Menu Example</div>
+        </a>
+        <a href="/PathFinder/">
+          <div class="button">Pathfinding Example</div>
+        </a>
       </div>
     </div>
   </body>
